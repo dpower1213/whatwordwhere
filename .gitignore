@@ -50,3 +50,5 @@ pip-delete-this-directory.txt
 
 # Ignore sqlite3 db since that is default in settings.py
 *.sqlite3
+
+*/local_settings.py
