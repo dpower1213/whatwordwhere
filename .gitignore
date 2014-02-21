@@ -1,5 +1,52 @@
+# Mac OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must ends with two \r.
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+
+## Python
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+
+# Django stuff:
 *.log
 *.pot
-*.pyc
-local_settings.py
-.DS_Store
+
+# Ignore sqlite3 db since that is default in settings.py
+*.sqlite3
