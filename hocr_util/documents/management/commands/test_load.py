@@ -1,11 +1,15 @@
-""" 
-Test management command to load a single document into the db, including GEOS stuff. 
+"""
+Test management command to load a single document into the db, including GEOS stuff.
 """
 
 from django.core.management.base import BaseCommand, CommandError
 from load_utils.load_document import enter_document
 from datetime import datetime
 
+import os.path
+from django.conf import settings
+
+BASE_DIR = getattr(settings, 'BASE_DIR', None)
 
 class Command(BaseCommand):
     help = "test by loading a document"
@@ -13,7 +17,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         # sample file included with repo, hopefully
-        this_file = "parser/test_hocr/58-1723645_990_201204.html"
+        this_file = os.path.join(BASE_DIR, 'hocr_parser/test_hocr/58-1723645_990_201204.html')
         doc_id = "58-1723645_990_201204"
         start = datetime.now()
         enter_document(this_file, doc_id)
